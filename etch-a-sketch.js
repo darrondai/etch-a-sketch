@@ -18,13 +18,20 @@ function createGrid(numRows, numColumns) {
 
 createGrid(16, 16);
 
+function calcRandRgb() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 const gridSquares = document.querySelectorAll(".grid-square");
 
 gridSquares.forEach((gridSquare) => {
-  gridSquare.addEventListener("mouseover", () =>
-    gridSquare.classList.toggle("hover")
-  );
-  gridSquare.addEventListener("mouseout", () =>
-    gridSquare.classList.toggle("hover")
-  );
+  gridSquare.addEventListener("mouseover", () => {
+    gridSquare.style.backgroundColor = calcRandRgb();
+  });
+  gridSquare.addEventListener("mouseout", () => {
+    gridSquare.style.backgroundColor = "green";
+  });
 });
