@@ -38,10 +38,11 @@ function getDimensions() {
 
 createGrid(16, 16);
 
-const gridSquares = document.querySelectorAll(".grid-square");
+const newGridBtn = document.querySelector("#new-grid-btn");
+const gridContainer = document.querySelector(".grid-container");
 
-gridSquares.forEach((gridSquare) => {
-  gridSquare.addEventListener("mouseover", () => {
-    gridSquare.style.backgroundColor = calcRandRgb();
-  });
+newGridBtn.addEventListener("click", () => {
+  const dimensions = getDimensions();
+  gridContainer.replaceChildren();
+  createGrid(dimensions, dimensions);
 });
