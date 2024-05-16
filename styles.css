@@ -12,10 +12,10 @@
 }
 
 .grid-square {
-  border: 2px solid black;
-  background-color: green;
+  border: 1px solid black;
+  background-color: white;
   aspect-ratio: 1 / 1;
   flex: auto;
   /* the flex-basis is based on the number of squares in x dimension */
-  flex-basis: calc(100% * (1 / 16));
+  /* flex-basis: calc(100% * (1 / 64)); */
 }
