@@ -19,3 +19,7 @@
   /* the flex-basis is based on the number of squares in x dimension */
   flex-basis: calc(100% * (1 / 16));
 }
+
+.hover {
+  background-color: red;
+}
