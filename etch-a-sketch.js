@@ -16,14 +16,14 @@ function createGrid(numRows, numColumns) {
   }
 }
 
-createGrid(16, 16);
-
 function calcRandRgb() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
   const b = Math.floor(Math.random() * 256);
   return `rgb(${r}, ${g}, ${b})`;
 }
+
+createGrid(16, 16);
 
 const gridSquares = document.querySelectorAll(".grid-square");
 
