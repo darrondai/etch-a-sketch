@@ -17,3 +17,10 @@ function createGrid(numRows, numColumns) {
 }
 
 createGrid(16, 16);
+
+const gridSquares = document.querySelectorAll(".grid-square");
+
+gridSquares.forEach((gridSquare) => {
+  addEventListener("mouseover", () => gridSquare.classList.toggle("hover"));
+  addEventListener("mouseout", () => gridSquare.classList.toggle("hover"));
+});
