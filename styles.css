@@ -19,3 +19,9 @@
   /* the flex-basis is based on the number of squares in x dimension */
   /* flex-basis: calc(100% * (1 / 64)); */
 }
+
+#new-grid-btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
