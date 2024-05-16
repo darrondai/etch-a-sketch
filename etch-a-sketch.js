@@ -1,4 +1,4 @@
-function createGrid(numRows, numColumns) {
+function createGrid(squaresPerSide) {
   const container = document.querySelector(".grid-container");
 
   function createGridSquare() {
@@ -10,10 +10,10 @@ function createGrid(numRows, numColumns) {
     return gridSquare;
   }
 
-  for (let row = 0; row < numRows; row++) {
-    for (let col = 0; col < numColumns; col++) {
+  for (let row = 0; row < squaresPerSide; row++) {
+    for (let col = 0; col < squaresPerSide; col++) {
       const gridSquare = createGridSquare();
-      gridSquare.style.flexBasis = `${100 / numColumns}%`;
+      gridSquare.style.flexBasis = `${100 / squaresPerSide}%`;
       container.appendChild(gridSquare);
     }
   }
@@ -42,7 +42,7 @@ const newGridBtn = document.querySelector("#new-grid-btn");
 const gridContainer = document.querySelector(".grid-container");
 
 newGridBtn.addEventListener("click", () => {
-  const dimensions = getDimensions();
+  const squaresPerSide = getDimensions();
   gridContainer.replaceChildren();
-  createGrid(dimensions, dimensions);
+  createGrid(squaresPerSide);
 });
