@@ -31,7 +31,4 @@ gridSquares.forEach((gridSquare) => {
   gridSquare.addEventListener("mouseover", () => {
     gridSquare.style.backgroundColor = calcRandRgb();
   });
-  gridSquare.addEventListener("mouseout", () => {
-    gridSquare.style.backgroundColor = "green";
-  });
 });
