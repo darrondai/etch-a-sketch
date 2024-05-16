@@ -4,6 +4,9 @@ function createGrid(numRows, numColumns) {
   function createGridSquare() {
     const gridSquare = document.createElement("div");
     gridSquare.classList.add("grid-square");
+    gridSquare.addEventListener("mouseover", () => {
+      gridSquare.style.backgroundColor = calcRandRgb();
+    });
     return gridSquare;
   }
 
