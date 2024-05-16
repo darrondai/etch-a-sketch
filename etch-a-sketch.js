@@ -10,7 +10,7 @@ function createGrid(numRows, numColumns) {
   for (let row = 0; row < numRows; row++) {
     for (let col = 0; col < numColumns; col++) {
       const gridSquare = createGridSquare();
-      gridSquare.textContent = `${row}, ${col}`;
+      gridSquare.style.flexBasis = `${100 / numColumns}%`;
       container.appendChild(gridSquare);
     }
   }
