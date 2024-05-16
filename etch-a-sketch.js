@@ -23,6 +23,16 @@ function calcRandRgb() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+function getDimensions() {
+  let input = prompt("how many squares per side?");
+
+  while (!Number.isInteger(+input) || input > 100 || input < 0) {
+    alert("please enter a number between 0 and 100");
+    input = prompt("how many squares per side?");
+  }
+  return +input;
+}
+
 createGrid(16, 16);
 
 const gridSquares = document.querySelectorAll(".grid-square");
